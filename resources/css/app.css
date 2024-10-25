@@ -1,0 +1,11 @@
+body {
+    display: inline-block;
+    padding: 50px;
+    background: linear-gradient(-60deg, rgb(37, 243, 14), rgb(104, 246, 94), rgb(248, 248, 28));
+}
+
+.logo {
+    background: linear-gradient(50deg, rgb(170, 195, 170), rgb(173, 220, 173), rgb(170, 218, 170));
+    height: 100px;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+}
