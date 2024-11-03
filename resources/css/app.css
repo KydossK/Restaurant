@@ -1,11 +1,143 @@
 body {
-    display: inline-block;
+    font-size: 14px; 
+    margin: 0;
     padding: 50px;
-    background: linear-gradient(-60deg, rgb(37, 243, 14), rgb(104, 246, 94), rgb(248, 248, 28));
+    display: inline-block;
+}
+
+/* header*/
+
+header {
+    border: solid 1px rgb(192, 20, 63);
+    border-radius: 20px;
+    display: flex;
+    align-items: center; 
+    justify-content: space-between; 
+    background-color: rgb(201, 197, 183); 
+    padding: 10px 20px; 
+    width: 100%; 
+}
+header a {
+    text-decoration: none; /* Enlever le soulignement des liens */
+    color: rgb(192, 20, 63); /* Couleur des liens dans le footer */
+    transition: color 0.3s; /* Animation de changement de couleur */
+}
+
+header a:hover {
+    color: #007BFF; /* Couleur des liens au survol */
+}
+
+.logo-container {
+    display: flex;
+    align-items: center; /* Centrer verticalement le logo */
 }
 
 .logo {
-    background: linear-gradient(50deg, rgb(170, 195, 170), rgb(173, 220, 173), rgb(170, 218, 170));
-    height: 100px;
+    height: 80px; 
+    background: linear-gradient(50deg, rgb(192, 20, 63), rgb(211, 155, 35), rgb(184, 202, 17));
     box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+
+/* footer*/
+
+footer {
+    background-color: rgb(201, 197, 183); 
+    padding: 10px 20px; 
+    width: 100%; 
+    border-top: solid 1px rgb(192, 20, 63); 
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    margin: 0 auto; 
+    width: 100%; 
+}
+
+.social-links, .footer-info {
+    list-style-type: none; /* Enlever les puces des listes */
+    padding: 0; 
+    margin: 0; 
+}
+
+.social-links li, .footer-info li {
+    font-size: medium;
+    margin-right: 40px; /* Espacement entre les éléments de la liste */
+}
+
+footer a {
+    text-decoration: none; /* Enlever le soulignement des liens */
+    color: rgb(192, 20, 63); /* Couleur des liens dans le footer */
+    transition: color 0.3s; /* Animation de changement de couleur */
+}
+
+footer a:hover {
+    color: #007BFF; /* Couleur des liens au survol */
+}
+
+
+
+
+/* responsive*/
+
+/* Mobile (portrait) : jusqu'à 320px */
+@media (max-width: 320px) {
+    body {
+        font-size: 14px;
+        background-color: #747bd3;
+    }
+
+    .container {
+        padding: 10px;
+    }
+}
+
+/* Mobile (paysage) : jusqu'à 480px */
+@media (max-width: 480px) {
+    body {
+        font-size: 16px;
+        background-color: #188fbe;
+    }
+
+    .container {
+        padding: 15px;
+    }
+}
+
+/* Tablette (portrait) : jusqu'à 768px */
+@media (max-width: 768px) {
+    body {
+        font-size: 18px;
+        background-color: #8b1111;
+    }
+
+    .container {
+        padding: 20px;
+    }
+}
+
+/* Tablette (paysage) ou petit ordinateur portable : jusqu'à 1024px */
+@media (max-width: 1024px) {
+    body {
+        font-size: 20px;
+        background-color: #d88847;
+    }
+
+    .container {
+        padding: 25px;
+    }
+}
+
+/* Ordinateur portable standard : jusqu'à 1280px */
+@media (max-width: 1280px) {
+    body {
+        font-size: 22px;
+        background-color: #91c48c;
+    }
+
+    .container {
+        padding: 30px;
+    }
 }

@@ -15,11 +15,11 @@ return new class extends Migration {
             //titre varchar
             $table->string('titre');
             //image varchar
-            $table->string('image');
+            $table->string('image')->nullable();
             //message text
             $table->text('message');
             //date publication timestamp
-            $table->timestamp('date_publication');
+            $table->timestamp('date_publication')->nullable();
             $table->timestamps();
         });
     }
