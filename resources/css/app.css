@@ -1,22 +1,31 @@
 body {
-    font-size: 14px; 
-    margin: 0;
-    padding: 50px;
-    display: inline-block;
+    font-size: 14px;
+    margin: 0 10px 0 10px; /* Supprime la marge supérieure */
+    padding: 0; 
+    max-width: calc(100vw - 20px); /* Assure que le body occupe la largeur de la fenêtre moins les marges */
+    min-height: 100vh;
+    overflow-x: hidden; /* Évite le défilement horizontal */
 }
 
-/* header*/
+/* header */
 
 header {
     border: solid 1px rgb(192, 20, 63);
     border-radius: 20px;
     display: flex;
-    align-items: center; 
-    justify-content: space-between; 
-    background-color: rgb(201, 197, 183); 
-    padding: 10px 20px; 
-    width: 100%; 
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(201, 197, 183);
+    padding: 10px 20px;
+    max-width: 1200px; 
+    margin: 20px auto; /* Centre le header avec un espacement en haut et en bas */
 }
+
+.nom-header {
+    text-align: center;
+    font-size: 1.5em;
+}
+
 header a {
     text-decoration: none; /* Enlever le soulignement des liens */
     color: rgb(192, 20, 63); /* Couleur des liens dans le footer */
@@ -42,18 +51,25 @@ header a:hover {
 /* footer*/
 
 footer {
-    background-color: rgb(201, 197, 183); 
-    padding: 10px 20px; 
-    width: 100%; 
-    border-top: solid 1px rgb(192, 20, 63); 
+    background-color: rgb(201, 197, 183);
+    padding: 10px 20px;
+    border-top: solid 1px rgb(192, 20, 63);
+    box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 10; /* Priorité plus élevée pour le garder au-dessus */
+    text-align: center;
 }
 
 .footer-container {
     display: flex;
     justify-content: space-between;
-    align-items: center; 
-    margin: 0 auto; 
-    width: 100%; 
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .social-links, .footer-info {
@@ -82,62 +98,38 @@ footer a:hover {
 
 /* responsive*/
 
-/* Mobile (portrait) : jusqu'à 320px */
-@media (max-width: 320px) {
-    body {
-        font-size: 14px;
-        background-color: #747bd3;
-    }
-
-    .container {
-        padding: 10px;
-    }
-}
-
-/* Mobile (paysage) : jusqu'à 480px */
+/* Classe pour les écrans mobiles (jusqu'à 480px) */
 @media (max-width: 480px) {
-    body {
+    body.mobile-screen {
         font-size: 16px;
         background-color: #188fbe;
     }
 
-    .container {
+    .mobile-screen .container {
         padding: 15px;
     }
 }
 
-/* Tablette (portrait) : jusqu'à 768px */
+/* Classe pour les tablettes en mode portrait (jusqu'à 768px) */
 @media (max-width: 768px) {
-    body {
+    body.tablet-portrait {
         font-size: 18px;
         background-color: #8b1111;
     }
 
-    .container {
+    .tablet-portrait .container {
         padding: 20px;
     }
 }
 
-/* Tablette (paysage) ou petit ordinateur portable : jusqu'à 1024px */
-@media (max-width: 1024px) {
-    body {
-        font-size: 20px;
-        background-color: #d88847;
-    }
-
-    .container {
-        padding: 25px;
-    }
-}
-
-/* Ordinateur portable standard : jusqu'à 1280px */
+/* Classe pour les ordinateurs portables standards (jusqu'à 1280px) */
 @media (max-width: 1280px) {
-    body {
+    body.laptop {
         font-size: 22px;
         background-color: #91c48c;
     }
 
-    .container {
+    .laptop .container {
         padding: 30px;
     }
 }

@@ -14,6 +14,7 @@
     <div class="logo-container">
         <img class="logo" src="{{asset('images/fast-food.png')}}" alt="Logo">
     </div>
+    <h1 class="nom-header">Mon Restaurant</h1> 
     <nav>
         <ul>
             <li><a href="{{route('home')}}">Accueil</a></li>
